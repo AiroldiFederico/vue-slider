@@ -13,6 +13,7 @@ createApp({
       
 
       currentImageIndex: 0,
+      currentTitleIndex: 0,
 
       images: [
         {
@@ -49,15 +50,19 @@ createApp({
     nextImage() {
       if (this.currentImageIndex < this.images.length - 1) {
         this.currentImageIndex++;
+        this.currentTitleIndex++;
       } else {
         this.currentImageIndex = 0;
+        this.currentTitleIndex = 0;
       }
     },
     prevImage() {
       if (this.currentImageIndex > 0) {
         this.currentImageIndex--;
+        this.currentTitleIndex--;
       } else {
         this.currentImageIndex = this.images.length - 1;
+        this.currentTitleIndex = this.currentTitleIndex  - 1;
       }
     },
 
