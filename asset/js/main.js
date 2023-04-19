@@ -12,8 +12,7 @@ createApp({
     return {
       
 
-      currentImageIndex: 0,
-      currentTitleIndex: 0,
+      currentIndex: 0,
 
       images: [
         {
@@ -48,21 +47,17 @@ createApp({
   methods: {
 
     nextImage() {
-      if (this.currentImageIndex < this.images.length - 1) {
-        this.currentImageIndex++;
-        this.currentTitleIndex++;
+      if (this.currentIndex < this.images.length - 1) {
+        this.currentIndex++;
       } else {
-        this.currentImageIndex = 0;
-        this.currentTitleIndex = 0;
+        this.currentIndex = 0;
       }
     },
     prevImage() {
-      if (this.currentImageIndex > 0) {
-        this.currentImageIndex--;
-        this.currentTitleIndex--;
+      if (this.currentIndex > 0) {
+        this.currentIndex--;
       } else {
-        this.currentImageIndex = this.images.length - 1;
-        this.currentTitleIndex = this.currentTitleIndex  - 1;
+        this.currentIndex = this.images.length - 1;
       }
     },
 
