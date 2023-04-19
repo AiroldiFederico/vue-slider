@@ -48,12 +48,12 @@
                 <div class="slider col-6 h-75">
 
                     <!-- UP ARROW -->
-                    <div class="prev"> <i class="fa-solid fa-chevron-up fa-bounce fa-xl" style="color: #141415;font-size: 4rem;"></i> </div>
+                    <div class="prev" @click="prevImage"> <i class="fa-solid fa-chevron-up fa-bounce fa-xl" style="color: #141415;font-size: 4rem;"></i> </div>
 
                     <div class="items">
 
                         
-                        <img src="" alt="" class="image">
+                        <img  alt="" class="image"  :src="images[currentImageIndex].image">
 
                         <!-- contenuto testuale -->
                         <div class="text">
@@ -67,7 +67,7 @@
                     
                     
                     <!-- DOWN ARROW -->
-                    <div class="next"> <i class="fa-solid fa-chevron-down fa-bounce fa-xl" style="color: #141415; font-size: 4rem;"></i> </div>
+                    <div class="next" @click="nextImage"> <i class="fa-solid fa-chevron-down fa-bounce fa-xl" style="color: #141415; font-size: 4rem;"></i> </div>
                     
                 </div>
                 
