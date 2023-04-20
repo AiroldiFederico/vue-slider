@@ -73,7 +73,10 @@
                 
                 <!-- THUMBNAILS -->
                 <div class="thumbs h-75">
-                    <div class="thumb active" id="0">
+                    <div class="thumb" :class=" currentIndex == index ? 'actual' : ''" v-for="(image, index) in images" :key="index" @click="changeImg(index)" >
+                        <img :src="image.image"  alt="" class="image" >
+                    </div>
+                    <!-- <div class="thumb active" id="0">
                         <img src="./asset/img/01.webp" alt="" class="image">
                     </div>
                     <div class="thumb active" id="1">
@@ -87,7 +90,7 @@
                     </div>
                     <div class="thumb active" id="4">
                         <img src="./asset/img/05.webp" alt="" class="image">
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="d-flex flex-column ps-4 w-per justify-content-center align-items-center gap-3">

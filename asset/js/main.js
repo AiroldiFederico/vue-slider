@@ -13,6 +13,8 @@ createApp({
       
 
       currentIndex: 0,
+      classe1: "thumb",
+      actual: 'actual',
 
       images: [
         {
@@ -36,7 +38,7 @@ createApp({
             title: "Marvel's Avengers",
             text: "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.",
         }
-      ]
+      ],
 
 
     }
@@ -53,12 +55,17 @@ createApp({
         this.currentIndex = 0;
       }
     },
+
     prevImage() {
       if (this.currentIndex > 0) {
         this.currentIndex--;
       } else {
         this.currentIndex = this.images.length - 1;
       }
+    },
+
+    changeImg(i){
+      this.currentIndex = i
     },
 
   }
