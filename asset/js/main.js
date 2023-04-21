@@ -44,6 +44,10 @@ createApp({
     }
   },
 
+  //chiamata function al caricamento della pagina
+  created(){
+    this.autoScroll()
+  },
 
   // FUNZIONI VUE
   methods: {
@@ -67,6 +71,16 @@ createApp({
     changeImg(i){
       this.currentIndex = i
     },
+
+    autoScroll(){
+      this.stopInterval = setInterval( ()=> {
+        this.nextImage()
+      }, 2000)
+    },
+
+    stopScroll(){
+      clearInterval( this.stopInterval )
+    }
 
   }
 
