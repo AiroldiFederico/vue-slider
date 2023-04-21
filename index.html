@@ -50,7 +50,7 @@
                     <!-- UP ARROW -->
                     <div class="prev" @click="prevImage"> <i class="fa-solid fa-chevron-up fa-bounce fa-xl" style="color: #141415;font-size: 4rem;"></i> </div>
 
-                    <div class="items">
+                    <div class="items" @mouseover="stopScroll" @mouseleave="autoScroll">
 
                         
                         <img  alt="" class="image"  :src="images[currentIndex].image">
